@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador Logístico Interactivo</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="script1.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <img src="img1.jpeg" alt="Imagen del Simulador Logístico" />
+    <div class="header-text">
+      <h1>Configura tu simulación a tu medida</h1>
+      <p>
+Selecciona tu transporte — junto con tipo de carga, urgencia y condiciones climáticas. Nuestro simulador ajusta cada resultado a tu situación real para ayudarte a tomar decisiones logísticas precisas y efectivas.   </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Configura tu Simulación</h2>
+      <form id="simulator-form">
+        <label for="transporte">Tipo de transporte:</label>
+        <select id="transporte" name="transporte" required>
+          <option value="">-- Selecciona --</option>
+          <option value="camion">Camión</option>
+
+        </select>
+
+        <label for="tipoCarga">Tipo de carga:</label>
+        <select id="tipoCarga" name="tipoCarga" required>
+          <option value="">--Seleccione--</option>
+          <option value="perecedera">Perecedera</option>
+          <option value="no_perecedera">No perecedera</option>
+          <option value="fragil">Frágil</option>
+          <option value="materiales_construccion">Materiales de construcción</option>
+          <option value="quimicos">Químicos</option>
+          <option value="equipos_electronicos">Equipos electrónicos</option>
+          <option value="textiles">Textiles</option>
+          <option value="otros">Otros</option>
+        </select>
+
+        <label for="urgencia">Urgencia del envío:</label>
+        <select id="urgencia" name="urgencia" required>
+          <option value="">-- Selecciona --</option>
+          <option value="baja">Baja</option>
+          <option value="media">Media</option>
+          <option value="alta">Alta</option>
+        </select>
+
+        <label for="distancia">Distancia (km):</label>
+        <input type="number" id="distancia" name="distancia" min="1" placeholder="Ej. 100" required />
+
+        <label for="peso">Peso de carga (kg):</label>
+        <input type="number" id="peso" name="peso" min="1" placeholder="Ej. 50" required />
+
+        <label for="clima">Condición del clima:</label>
+        <select id="clima" name="clima" required>
+          <option value="">-- Selecciona --</option>
+          <option value="soleado">Soleado</option>
+          <option value="lluvia">Lluvia</option>
+          <option value="nublado">Nublado</option>
+        </select>
+
+        <label for="estadoCarretera">Estado de la carretera:</label>
+        <select id="estadoCarretera" name="estadoCarretera" required>
+          <option value="">-- Selecciona --</option>
+          <option value="buena">Buena</option>
+          <option value="regular">Regular</option>
+          <option value="mala">Mala</option>
+        </select>
+
+        <label for="trafico">Nivel de tráfico:</label>
+        <select id="trafico" name="trafico" required>
+          <option value="">-- Selecciona --</option>
+          <option value="bajo">Bajo</option>
+          <option value="medio">Medio</option>
+          <option value="alto">Alto</option>
+        </select>
+
+        <button type="submit">Simular</button>
+      </form>
+    </section>
+
+    <section id="resultados" class="resultados-section">
+
+      <!-- Aquí aparecerán los resultados -->
+    </section>
+  </main>
+</body>
+</html>
